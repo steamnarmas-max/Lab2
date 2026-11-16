@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(ip_filter main.cpp)
+install(TARGETS ip_filter RUNTIME DESTINATION bin)
 
 option(BUILD_TESTS "Build unit tests" OFF)
 
