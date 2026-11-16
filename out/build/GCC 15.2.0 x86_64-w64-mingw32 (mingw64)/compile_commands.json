@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/sosislonik/Desktop/Lab2/out/build/GCC 15.2.0 x86_64-w64-mingw32 (mingw64)",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe   -g -std=c++17 -o CMakeFiles\\ip_filter.dir\\main.cpp.obj -c C:\\Users\\sosislonik\\Desktop\\Lab2\\main.cpp",
+  "file": "C:/Users/sosislonik/Desktop/Lab2/main.cpp",
+  "output": "CMakeFiles/ip_filter.dir/main.cpp.obj"
+}
+]
