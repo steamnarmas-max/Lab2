@@ -28,3 +28,17 @@ if (BUILD_TESTS)
     include(GoogleTest)
     gtest_discover_tests(ip_filter_tests)
 endif()
+
+set(CPACK_PACKAGE_NAME "ip_filter")
+set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "IP Filter Lab")
+
+if(WIN32)
+    set(CPACK_GENERATOR "ZIP")
+elseif(APPLE)
+    set(CPACK_GENERATOR "TGZ")
+else()
+    set(CPACK_GENERATOR "TGZ")
+endif()
+
+include(CPack)
