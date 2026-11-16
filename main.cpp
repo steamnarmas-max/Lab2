@@ -31,7 +31,6 @@ std::vector<std::string> split(const std::string &str, char d)
     return r;
 }
 
-// Печать одного IP (тот же самый цикл, что был в вашем main)
 void print_ip(const std::vector<std::string>& ip)
 {
     for (auto ip_part = ip.cbegin(); ip_part != ip.cend(); ++ip_part)
@@ -45,7 +44,6 @@ void print_ip(const std::vector<std::string>& ip)
     std::cout << std::endl;
 }
 
-// Обратная лексикографическая (числовая) сортировка
 void sort_reverse_lexicographically(std::vector<std::vector<std::string>>& pool)
 {
     auto ip_key = [](const std::vector<std::string>& ip) {
@@ -58,11 +56,9 @@ void sort_reverse_lexicographically(std::vector<std::vector<std::string>>& pool)
               });
 }
 
-// decltype + auto + лямбда — фильтр по предикату с сохранением порядка
 template <typename Predicate>
 auto filter(const std::vector<std::vector<std::string>>& pool, Predicate pred)
 {
-    // std::decay_t убирает const и & из типа, полученного через decltype
     std::decay_t<decltype(pool)> result; 
     
     for (const auto& ip : pool) {
@@ -88,7 +84,6 @@ int main(int argc, char const *argv[])
         // TODO reverse lexicographically sort
         sort_reverse_lexicographically(ip_pool);
 
-        // Полный список после сортировки
         for (const auto& ip : ip_pool)
         {
             print_ip(ip);
